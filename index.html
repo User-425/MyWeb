@@ -1,11 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>MyWeb as is, User_425</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <h1>General web portfolio, testing github pages :D</h1>
+
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gray-900 z-50 border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-blue-400">
+                    User_425
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-300 hover:text-white">Home</a>
+                    <a href="#about" class="nav-link text-gray-300 hover:text-white">About</a>
+                    <a href="#skills" class="nav-link text-gray-300 hover:text-white">Skills</a>
+                    <a href="#projects" class="nav-link text-gray-300 hover:text-white">Projects</a>
+                    <a href="#contact" class="nav-link text-gray-300 hover:text-white">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-gray-900 border-t border-gray-800 hidden">
+            <div class="container mx-auto px-6 py-4 space-y-4">
+                <a href="#home" class="block text-gray-300 hover:text-white">Home</a>
+                <a href="#about" class="block text-gray-300 hover:text-white">About</a>
+                <a href="#skills" class="block text-gray-300 hover:text-white">Skills</a>
+                <a href="#projects" class="block text-gray-300 hover:text-white">Projects</a>
+                <a href="#contact" class="block text-gray-300 hover:text-white">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 bg-gray-900"></div>
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=" 60" height="60" viewBox="0 0 60 60"
+            xmlns="http://www.w3.org/2000/svg" %3E%3Cg fill="none" fill-rule="evenodd" %3E%3Cg fill="%239C92AC"
+            fill-opacity="0.05" %3E%3Ccircle cx="30" cy="30" r="4" /%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
+
+        <!-- Floating Elements -->
+        <div class="floating-element absolute top-20 left-10 w-20 h-20 bg-blue-500/10 rounded-full blur-xl"></div>
+        <div class="floating-element absolute bottom-32 right-20 w-32 h-32 bg-blue-500/10 rounded-full blur-xl"></div>
+        <div class="floating-element absolute top-1/2 left-1/4 w-16 h-16 bg-blue-500/10 rounded-full blur-xl"></div>
+
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="animate-fade-in-up">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                    Hi, I'm <span class="text-blue-400">User_425</span>
+                </h1>
+                <div class="text-xl md:text-2xl text-gray-300 mb-8 h-8">
+                    <span id="typed-text"></span>
+                    <span class="animate-pulse">|</span>
+                </div>
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed">
+                    Passionate informatics engineering student crafting innovative solutions through code, design, and
+                    technology.
+                    Transforming ideas into digital experiences.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#projects"
+                        class="group bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
+                        View My Work
+                        <i data-lucide="arrow-right"
+                            class="inline w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                    </a>
+                    <a href="#contact"
+                        class="border-2 border-gray-600 hover:border-blue-400 px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:bg-blue-400/10">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-800/50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-16 text-blue-400">
+                    About Me
+                </h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <p class="text-lg text-gray-300 leading-relaxed">
+                            I'm a dedicated informatics engineering student with a passion for creating innovative
+                            digital solutions.
+                            Currently pursuing my Bachelor's degree, I'm constantly exploring new technologies and
+                            methodologies.
+                        </p>
+                        <p class="text-lg text-gray-300 leading-relaxed">
+                            My journey in technology began with curiosity and has evolved into a deep commitment to
+                            solving complex problems
+                            through elegant code and thoughtful design.
+                        </p>
+                        <div class="grid grid-cols-2 gap-6 pt-6">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-blue-400 mb-2">5+</div>
+                                <div class="text-gray-400">Years Coding</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-blue-400 mb-2">5+</div>
+                                <div class="text-gray-400">Projects</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="w-full h-96 bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden">
+                            <div class="absolute inset-4 bg-gray-800 rounded-xl border border-gray-600 p-6">
+                                <div class="space-y-4">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                                    </div>
+                                    <div class="font-mono text-sm space-y-2 text-gray-300">
+                                        <div class="text-blue-400">const</div>
+                                        <div class="ml-4 text-blue-400">student = {</div>
+                                        <div class="ml-8">name: <span class="text-blue-400">"User_425"</span>,</div>
+                                        <div class="ml-8">degree: <span class="text-blue-400">"Informatics
+                                                Engineering"</span>,</div>
+                                        <div class="ml-8">year: <span class="text-blue-400">3</span>,</div>
+                                        <div class="ml-8">passion: <span class="text-blue-400">"Innovation"</span>,
+                                        </div>
+                                        <div class="ml-8">status: <span class="text-blue-400">"Learning about life.."</span></div>
+                                        <div class="ml-4 text-blue-400">};</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+<!-- Skills Section -->
+<section id="skills" class="py-20 bg-gray-900">
+  <div class="container mx-auto px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-16 text-blue-400">
+        Skills & Technologies
+      </h2>
+
+      <!-- Skills Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 max-w-6xl mx-auto">
+        
+        <!-- HTML -->
+        <div class="group bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-orange-400 hover:bg-gray-800 transition-all duration-300 text-center">
+          <div class="w-12 h-12 mx-auto mb-4 bg-orange-500/10 rounded-lg flex items-center justify-center group-hover:bg-orange-500/20 transition-colors">
+            <i class="fa-brands fa-html5 text-3xl text-orange-500"></i>
+          </div>
+          <h3 class="font-semibold text-gray-200 group-hover:text-white transition-colors">HTML</h3>
+        </div>
+
+        <!-- CSS -->
+        <div class="group bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-blue-400 hover:bg-gray-800 transition-all duration-300 text-center">
+          <div class="w-12 h-12 mx-auto mb-4 bg-blue-500/10 rounded-lg flex items-center justify-center group-hover:bg-blue-500/20 transition-colors">
+            <i class="fa-brands fa-css3-alt text-3xl text-blue-400"></i>
+          </div>
+          <h3 class="font-semibold text-gray-200 group-hover:text-white transition-colors">CSS</h3>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="group bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-yellow-400 hover:bg-gray-800 transition-all duration-300 text-center">
+          <div class="w-12 h-12 mx-auto mb-4 bg-yellow-500/10 rounded-lg flex items-center justify-center group-hover:bg-yellow-500/20 transition-colors">
+            <i class="fa-brands fa-js text-3xl text-yellow-400"></i>
+          </div>
+          <h3 class="font-semibold text-gray-200 group-hover:text-white transition-colors">JavaScript</h3>
+        </div>
+
+        <!-- Git -->
+        <div class="group bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-red-500 hover:bg-gray-800 transition-all duration-300 text-center">
+          <div class="w-12 h-12 mx-auto mb-4 bg-red-500/10 rounded-lg flex items-center justify-center group-hover:bg-red-500/20 transition-colors">
+            <i class="fa-brands fa-git-alt text-3xl text-red-500"></i>
+          </div>
+          <h3 class="font-semibold text-gray-200 group-hover:text-white transition-colors">Git</h3>
+        </div>
+
+        <!-- Discord.js -->
+        <div class="group bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-indigo-400 hover:bg-gray-800 transition-all duration-300 text-center">
+          <div class="w-12 h-12 mx-auto mb-4 bg-indigo-500/10 rounded-lg flex items-center justify-center group-hover:bg-indigo-500/20 transition-colors">
+            <i class="fa-brands fa-discord text-3xl text-indigo-400"></i>
+          </div>
+          <h3 class="font-semibold text-gray-200 group-hover:text-white transition-colors">Discord.js</h3>
+        </div>
+
+        <!-- PHP -->
+        <div class="group bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-indigo-300 hover:bg-gray-800 transition-all duration-300 text-center">
+          <div class="w-12 h-12 mx-auto mb-4 bg-indigo-300/10 rounded-lg flex items-center justify-center group-hover:bg-indigo-300/20 transition-colors">
+            <i class="fa-brands fa-php text-3xl text-indigo-300"></i>
+          </div>
+          <h3 class="font-semibold text-gray-200 group-hover:text-white transition-colors">PHP</h3>
+        </div>
+
+        <!-- Laravel -->
+        <div class="group bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-red-400 hover:bg-gray-800 transition-all duration-300 text-center">
+          <div class="w-12 h-12 mx-auto mb-4 bg-red-400/10 rounded-lg flex items-center justify-center group-hover:bg-red-400/20 transition-colors">
+            <i class="fa-brands fa-laravel text-3xl text-red-400"></i>
+          </div>
+          <h3 class="font-semibold text-gray-200 group-hover:text-white transition-colors">Laravel</h3>
+        </div>
+
+        <!-- C# -->
+        <div class="group bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-purple-400 hover:bg-gray-800 transition-all duration-300 text-center">
+          <div class="w-12 h-12 mx-auto mb-4 bg-purple-500/10 rounded-lg flex items-center justify-center group-hover:bg-purple-500/20 transition-colors">
+            <i class="fa-solid fa-code text-3xl text-purple-400"></i>
+          </div>
+          <h3 class="font-semibold text-gray-200 group-hover:text-white transition-colors">C#</h3>
+        </div>
+
+        <!-- Unity -->
+        <div class="group bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-gray-400 hover:bg-gray-800 transition-all duration-300 text-center">
+          <div class="w-12 h-12 mx-auto mb-4 bg-gray-400/10 rounded-lg flex items-center justify-center group-hover:bg-gray-400/20 transition-colors">
+            <i class="fa-brands fa-unity text-3xl text-gray-300"></i>
+          </div>
+          <h3 class="font-semibold text-gray-200 group-hover:text-white transition-colors">Unity</h3>
+        </div>
+
+        <!-- Lua -->
+        <div class="group bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-blue-300 hover:bg-gray-800 transition-all duration-300 text-center">
+          <div class="w-12 h-12 mx-auto mb-4 bg-blue-300/10 rounded-lg flex items-center justify-center group-hover:bg-blue-300/20 transition-colors">
+            <i class="fa-solid fa-moon text-3xl text-blue-300"></i>
+          </div>
+          <h3 class="font-semibold text-gray-200 group-hover:text-white transition-colors">Lua</h3>
+        </div>
+
+        <!-- Java -->
+        <div class="group bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-orange-300 hover:bg-gray-800 transition-all duration-300 text-center">
+          <div class="w-12 h-12 mx-auto mb-4 bg-orange-300/10 rounded-lg flex items-center justify-center group-hover:bg-orange-300/20 transition-colors">
+            <i class="fa-brands fa-java text-3xl text-orange-300"></i>
+          </div>
+          <h3 class="font-semibold text-gray-200 group-hover:text-white transition-colors">Java</h3>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-800/50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-16 text-blue-400">
+                    My Projects <3
+                </h2>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div
+                        class="project-card group bg-gray-900 rounded-xl overflow-hidden border border-gray-700 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                        <div class="aspect-video bg-gray-800 relative overflow-hidden">
+                            <div
+                                class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300">
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-16 h-16 bg-blue-500/30 rounded-full flex items-center justify-center">
+                                    <i data-lucide="smartphone" class="w-8 h-8 text-blue-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-3">This is Title</h3>
+                            <p class="text-gray-400 mb-4">description here</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 text-xs bg-gray-700 text-gray-300 rounded-full">HTML</span>
+                                <span class="px-3 py-1 text-xs bg-gray-700 text-gray-300 rounded-full">CSS</span>
+                                <span class="px-3 py-1 text-xs bg-gray-700 text-gray-300 rounded-full">JS</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="#"
+                                    class="flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300">
+                                    <i data-lucide="external-link" class="w-4 h-4 mr-2"></i>
+                                    Demo
+                                </a>
+                                <a href="#"
+                                    class="flex items-center text-gray-400 hover:text-gray-300 transition-colors duration-300">
+                                    <i data-lucide="github" class="w-4 h-4 mr-2"></i>
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-8 text-blue-400">
+                    Let's Connect
+                </h2>
+                <p class="text-xl text-gray-300 mb-12">
+                    Ready to collaborate on innovative projects or discuss opportunities in technology?
+                </p>
+
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <a href="mailto:anfasarabbany425@gmail.com" target="_blank"
+                        class="group bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                        <div
+                            class="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500/30 transition-colors duration-300">
+                            <i data-lucide="mail" class="w-6 h-6 text-blue-400"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Email</h3>
+                        <p class="text-gray-400">anfasarabbany425@gmail.com</p>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/achmad-anfasa-rabbany-1a5276208/" target="_blank"
+                        class="group bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                        <div
+                            class="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500/30 transition-colors duration-300">
+                            <i data-lucide="linkedin" class="w-6 h-6 text-blue-400"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">LinkedIn</h3>
+                        <p class="text-gray-400">Achmad Anfasa Rabbany</p>
+                    </a>
+
+                    <a href="https://github.com/User-425/" target="_blank"
+                        class="group bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                        <div
+                            class="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500/30 transition-colors duration-300">
+                            <i data-lucide="github" class="w-6 h-6 text-blue-400"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">GitHub</h3>
+                        <p class="text-gray-400">@User-425</p>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-800 border-t border-gray-700">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 mb-4 md:mb-0">
+                    © 2025 User_425. All rights reserved.
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://www.linkedin.com/in/achmad-anfasa-rabbany-1a5276208/" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://github.com/User-425/" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

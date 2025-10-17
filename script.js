@@ -335,33 +335,34 @@ document.addEventListener('keydown', (e) => {
     }
     
     if (JSON.stringify(konamiCode) === JSON.stringify(konamiSequence)) {
-        document.body.style.animation = 'rainbow-background 2s infinite';
-        setTimeout(() => {
-            document.body.style.animation = '';
-        }, 5000);
-        
-        const message = document.createElement('div');
-        message.innerHTML = 'Uh.. Congrats ig? 🎉';
-        message.style.cssText = `
+        const overlay = document.createElement('div');
+        overlay.style.cssText = `
             position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: linear-gradient(45deg, #4ecdc4, #45b7d1);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            font-size: 18px;
-            font-weight: bold;
-            z-index: 10000;
-            animation: bounce 0.5s ease-in-out;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 99999;
         `;
         
-        document.body.appendChild(message);
+        const iframe = document.createElement('iframe');
+        iframe.width = "800";
+        iframe.height = "450";
+        iframe.src = "https://www.youtube.com/embed/dQw4w9WgXcQ&autoplay=1";
+        iframe.allow = "autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+        iframe.allowFullscreen = true;
+        iframe.style.border = "none";
+        iframe.style.borderRadius = "10px";
+        iframe.style.boxShadow = "0 0 20px rgba(255,255,255,0.5)";
         
-        setTimeout(() => {
-            message.remove();
-        }, 3000);
+        overlay.appendChild(iframe);
+        document.body.appendChild(overlay);
+
+        setTimeout(() => overlay.remove(), 10000);
         
         konamiCode = [];
     }

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - User_425</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gray-900 z-50 border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-blue-400">
+                    <a href="/">User_425</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="/#home" class="nav-link text-gray-300 hover:text-white">Home</a>
+                    <a href="/#about" class="nav-link text-gray-300 hover:text-white">About</a>
+                    <a href="/#skills" class="nav-link text-gray-300 hover:text-white">Skills</a>
+                    <a href="/#projects" class="nav-link text-gray-300 hover:text-white">Projects</a>
+                    <a href="/#contact" class="nav-link text-gray-300 hover:text-white">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-gray-900 border-t border-gray-800 hidden">
+            <div class="container mx-auto px-6 py-4 space-y-4">
+                <a href="/#home" class="block text-gray-300 hover:text-white">Home</a>
+                <a href="/#about" class="block text-gray-300 hover:text-white">About</a>
+                <a href="/#skills" class="block text-gray-300 hover:text-white">Skills</a>
+                <a href="/#projects" class="block text-gray-300 hover:text-white">Projects</a>
+                <a href="/#contact" class="block text-gray-300 hover:text-white">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 404 Error Section -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 bg-gray-900"></div>
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=" 60" height="60" viewBox="0 0 60 60"
+            xmlns="http://www.w3.org/2000/svg" %3E%3Cg fill="none" fill-rule="evenodd" %3E%3Cg fill="%239C92AC"
+            fill-opacity="0.05" %3E%3Ccircle cx="30" cy="30" r="4" /%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
+
+        <!-- Floating Elements -->
+        <div class="floating-element absolute top-20 left-10 w-20 h-20 bg-red-500/10 rounded-full blur-xl"></div>
+        <div class="floating-element absolute bottom-32 right-20 w-32 h-32 bg-red-500/10 rounded-full blur-xl"></div>
+        <div class="floating-element absolute top-1/2 left-1/4 w-16 h-16 bg-red-500/10 rounded-full blur-xl"></div>
+
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="animate-fade-in-up">
+                <div class="text-8xl md:text-9xl font-bold mb-6 text-red-500 opacity-80">
+                    404
+                </div>
+                
+                <h1 id="error-title" class="text-4xl md:text-6xl font-bold mb-6 text-white">
+                    Page Not Found
+                </h1>
+                
+                <div id="error-message" class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                    <p class="leading-relaxed">
+                        Oops! Whatever you're looking for seems to have vanished into thin air.
+                    </p>
+                </div>
+                
+                <div id="additional-info" class="text-lg text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed hidden">
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/"
+                        class="group bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
+                        <i data-lucide="home" class="inline w-4 h-4 mr-2"></i>
+                        Go Home
+                    </a>
+                    <button onclick="history.back()"
+                        class="border-2 border-gray-600 hover:border-blue-400 px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:bg-blue-400/10">
+                        <i data-lucide="arrow-left" class="inline w-4 h-4 mr-2"></i>
+                        Go Back
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-800 border-t border-gray-700">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 mb-4 md:mb-0">
+                    © 2025 User_425. All rights reserved.
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://www.linkedin.com/in/achmad-anfasa-rabbany-1a5276208/" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://github.com/User-425/" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 404 Page JavaScript -->
+    <script>
+        // Initialize Lucide icons
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+        });
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn?.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuBtn.querySelector('[data-lucide]');
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
+            lucide.createIcons();
+        });
+
+        // Parse URL parameters for custom text
+        function parseURLParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            // Custom title
+            const customTitle = urlParams.get('title');
+            if (customTitle) {
+                document.getElementById('error-title').textContent = decodeURIComponent(customTitle);
+            }
+            
+            // Custom message
+            const customMessage = urlParams.get('message');
+            if (customMessage) {
+                document.getElementById('error-message').innerHTML = `<p class="leading-relaxed">${decodeURIComponent(customMessage)}</p>`;
+            }
+            
+            // Additional info
+            const additionalInfo = urlParams.get('info');
+            if (additionalInfo) {
+                const infoElement = document.getElementById('additional-info');
+                infoElement.innerHTML = `<p>${decodeURIComponent(additionalInfo)}</p>`;
+                infoElement.classList.remove('hidden');
+            }
+            
+            // Custom error code
+            const customCode = urlParams.get('code');
+            if (customCode) {
+                document.getElementById('error-code').textContent = decodeURIComponent(customCode);
+            }
+            
+            // Update page title
+            const pageTitle = customTitle || 'Page Not Found';
+            document.title = `${pageTitle} - User_425`;
+        }
+
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const floatingElements = document.querySelectorAll('.floating-element');
+            
+            floatingElements.forEach((element, index) => {
+                const speed = 0.5 + (index * 0.1);
+                element.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+
+        // Initialize on page load
+        parseURLParams();
+
+        console.log('404 Page loaded! 🚀');
+        console.log('URL Parameters supported:');
+        console.log('- ?title=Your Custom Title');
+        console.log('- ?message=Your Custom Message');
+        console.log('- ?info=Additional Information');
+        console.log('- ?code=CUSTOM_ERROR_CODE');
+        console.log('Example: 404.html?title=Oops!&message=Something went wrong&info=Please try again later&code=CUSTOM_404');
+    </script>
+
+    <!-- Add rainbow animation styles -->
+    <style>
+        @keyframes rainbow-background {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</body>
+
+</html>

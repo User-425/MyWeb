@@ -350,9 +350,9 @@ document.addEventListener('keydown', (e) => {
         `;
         
         const iframe = document.createElement('iframe');
-        iframe.width = "800";
-        iframe.height = "450";
-        iframe.src = "https://www.youtube.com/embed/dQw4w9WgXcQ&autoplay=1";
+        iframe.width = "1280";
+        iframe.height = "720";
+        iframe.src = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1";
         iframe.allow = "autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
         iframe.allowFullscreen = true;
         iframe.style.border = "none";

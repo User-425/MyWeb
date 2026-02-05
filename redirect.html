@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirecting...</title>
+</head>
+<body>
+  <p>You see nothing!</p>
+
+  <script>
+    const routes = {
+      "test": "https://www.google.com",
+    };
+
+    const defaultRedirect = "https://user-425.github.io/MyWeb/";
+
+    const params = new URLSearchParams(window.location.search);
+    const target = params.get("to");
+
+    const redirectUrl = routes[target] || defaultRedirect;
+
+    window.location.replace(redirectUrl);
+  </script>
+</body>
+</html>
